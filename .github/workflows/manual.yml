@@ -22,6 +22,6 @@ jobs:
       uses: Azure/arm-deploy@v1.0.9
       with:
         scope: resourcegroup
-        resourceGroupName: emmam-wth-devops-github
-        template: "https://github.com/emmaclarem/what-the-hack-devops-with-github/blob/main/ARM-Templates/container-webapp-template.json"
+        resourceGroupName: "emmam-wth-devops-github"
+        template: "./ARM-Templates/container-webapp-template.json"
         deploymentMode: incremental
