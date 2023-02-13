@@ -2,8 +2,7 @@ on:
   workflow_dispatch
 
 jobs:
----
-- name: Azure Login
+  name: Azure Login
   uses: Azure/login@v1.4.6
   with:
     # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
@@ -22,7 +21,7 @@ jobs:
     # Provide audience field for access-token. Default value is api://AzureADTokenExchange
     audience: # optional, default is api://AzureADTokenExchange
 ---    
-- name: Deploy Azure Resource Manager (ARM) Template
+  name: Deploy Azure Resource Manager (ARM) Template
   uses: Azure/arm-deploy@v1.0.9
   with:
     # Provide the scope of the deployment. Valid values are: 'resourcegroup', 'managementgroup', 'subscription'
