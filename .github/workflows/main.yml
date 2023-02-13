@@ -1,8 +1,8 @@
 on:
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
-- name: AzureLogin
+- name: Azure Login
   uses: Azure/login@v1.4.6
   with:
     # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
